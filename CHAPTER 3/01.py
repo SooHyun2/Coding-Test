@@ -13,6 +13,18 @@ second_n = data[1]
 # print(first_n,second_n)
 result = 0
 plus_number = 0
+flag = 1
 
 for i in range(m):
-  
+  plus_number += 1
+  if flag % 2 == 1:
+    result = result + first_n
+  elif flag % 2 == 0:
+    result = result + second_n
+    flag += 1
+    plus_number = 0
+
+  if plus_number == k:
+    flag += 1
+
+print(result)
